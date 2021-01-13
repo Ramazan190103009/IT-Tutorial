@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C#</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    h1{
+        margin-top: 10px;
+    }
+    a{
+        position: relative;
+        left: 5%;
+        top:15px;
+    }
+    .info{
+        margin-top: 30px;
+        color: #fff;
+        background-color: rgb(97, 153, 199, 0.6);
+        font-size: 15px;
+        padding: 5px;
+        width: 100%;
+    }
+    .Example{
+        margin-top: 30px;
+        font-size: 40px;
+        color: #000;
+        background-color: #ddd;
+        height: 400px;
+    }
+    .code{
+        background-color: #1b171f;
+        color: rgb(185, 107, 17);
+        font-size: 18px;
+        padding: 12px;
+    }
+    .code span{
+        color: green;
+    }
+    .exercise-code span{
+        color: green;
+    }
+    .Ex{
+        margin-top: 20px;
+        font-size: 17px;
+        color: #000;
+        background-color: #ddd;
+        height: 285px;
+    }
+    .exercise-code{
+        font-size: 20px;
+        height: 110px;
+        color: rgb(23, 132, 139);
+        background-color:  #1b171f;
+    }
+    input[type=text]{
+        width: 5%;
+        margin-top: 8px;
+    }
+    #demo{
+        position: relative;
+        left: 15px;
+        top: 15px;
+        font-size: 35px;
+    }
+    @media (max-width: 500px){
+        .Ex{
+            height: 280px;
+        }
+        #demo{
+            font-size: 22px;
+        }
+    }
+</style>
+<body>
+    <h1 class="container display-4" style="color: #fff;">C# Tutorial</h1>
+    <a href="index.html" class="container"><button class="Home btn btn-success btn-lg">< Home</button></a>
+    <div class="container info">
+        C# (C-Sharp) is a programming language developed by Microsoft that runs on the .NET Framework. <br><br>
+        C# is used to develop web apps, desktop apps, mobile apps, games and much more.
+    </div>
+    <div class="container Ex">
+        <h1>Exercise</h1>
+        <p>Insert the missing part of the code below to output "Hello C#".</p>
+    <div class="container exercise-code">
+         <code>
+          static void <input type="text">(string[] args) { <br>
+          <input type="text">.<input type="text">("Hello C#"); <br>
+        }
+        </code>
+    </div>
+    <button class="btn btn-success btn-lg show" style="margin-top: 20px;" onclick="fun()">Show Answer</button>
+    <code id="demo"></code>
+    <script>
+        function fun() {
+            document.getElementById('demo').innerHTML = 'Main, Console, Writeline';
+        }
+    </script>    
+</div>
+
+</body>
+</html>

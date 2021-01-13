@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IT Tutorial</title>
+	<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="media.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnMj8Xc5_jA0tqVHCoFHCk-2sHt4imItA&callback=initMap&libraries=&v=weekly"
+    defer
+  ></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="container1" class="container-fluid">
+    <a href="#" class="nav-link" id="logo" onclick="window.location.reload()">IT Tutorial</a>
+    <div class="navbar" id="menu">
+      <a href="#" class="nav-link" id="home">Home</a>
+      <a href="#tutorial" class="nav-link" onclick="change(this)">Tutorials</a>
+      <a href="#" class="nav-link" onclick=" DropDownContact(this)">Contacts <i class="fa fa-caret-down"></i></a>
+      <div id="dropdwn1" class="dropdown1">
+       <a href="#" class="nav-link1">Contacts1</a>
+       <a href="#" class="nav-link1">Contacts2</a>
+       <a href="#" class="nav-link1">Contacts3</a>
+      </div>
+      <a href="#" class="nav-link" onmouseover="big(this)" onmouseout="small(this)" onclick="change(this)">About us</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+<div id="container2" class="container-fluid-right">
+ 
+   <button id="btn1" class="btn btn-success">Sign up</button>
+   <button id="btn2" class="btn btn-success">Log in</button>
+</div>
+</div>
+  <script type="text/javascript">
+    $('.icon').click(function(){
+      $('#btn-drop').toggle();
+    })
+    $(function(){
+      $('#btn1').click(function(){
+        $('#id01').show(1000);
+      })
+    })
+        $(function(){
+      $('#btn2').click(function(){
+        $('#id02').show(1000);
+      });
+    });
+  </script>
+</div>  
+<div id="id01" class="modal">
+  <form class="modal-content" id="form">
+    <div class="container4">
+      <h1 id="signup" class="display-4"><b>Sign Up</b></h1>
+  <span id="close" onclick="document.getElementById('id01').style.display='none'">&times;</span>
+      <label for="email"><b>Email</b></label><br>
+      <input type="text" placeholder="Enter Email" name="email" required><br>
+
+      <label for="psw"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label><br>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <br>
+      <label>
+        <input type="checkbox" name="remember" checked> Remember me
+      </label>
+      <div>
+        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+   </div>
+  </form>
+</div>
+<div id="id02" class="modal">
+   <form class="modal-content" id="form2">
+     <div class="container5">
+      <h1 id="login">Login your account</h1>
+     <span id="closed" onclick="document.getElementById('id02').style.display='none'">&times</span>
+     <label><strong>Username</strong></label>
+     <input type="text" name="name" placeholder="Enter Name">
+     <label><strong>Password</strong></label>
+     <input type="password" name="psw" placeholder="Enter Name"><br>
+     <input type="checkbox" name="rem" checked> Remember me
+     <div><br>
+       <button type="submit
+       " class="loginbtn">Log in</button>
+       <span class="forgotpsw"><a href="#">Forgot password?</a></span>
+       <span class="user">New User?<a href="#"> Sign up here.</a></span>
+     </div>
+     </div>
+   </form>
+ </div>
+</div>
+<img src="image/Rectangle.jpg" class="img2" id="header-image">
+<div class="container container3" id="container3">  
+  <div class="border card-body" id="card">
+      Welcome to our tutorial
+    </div>
+</div>
+</div>
+<div id="AboutUs" class="container">
+  <div id="info" class="container">
+  <h1 id="h1">About us</h1>
+  <p id="p13">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna <br>aliqua. Ut enim ad minim veniam, quis nostrud <br> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate <br>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</div>
+</div>
+<div class="Exercises">
+  <h2 class="display-2 heading2" id="heading2">Exercises</h2>
+  <a href="HTML.html" target="_blank"><button class="btn btn-success btn-html">HTML Exercises</button></a>
+  <button class="btn btn-success btn-css" onclick="document.getElementById('css-modal').style.display='block'">CSS Exercises</button>
+  <a href="js.html"><button class="btn btn-success btn-js" id="js">JS Exercises</button></a>
+  <a href="java.html"><button class="btn btn-success btn-java" id="btn-java">Java</button></a>
+  <a href="C++.html"><button class="btn btn-success btn-c" id="btn-c">C++</button></a>
+  <a href="sql.html"><button class="btn btn-success btn-sql" id="btn-sql">SQL</button></a>
+  <a href="jq.html"><button class="btn btn-success btn-jq" id="btn-jq">Jquery</button></a>
+  <a href="python.html"><button class="btn btn-success btn-python" id="btn-python">Python</button></a>
+  <a href="php.html"><button class="btn btn-success btn-php" id="btn-php">PHP</button></a>
+  <a href="C.html"><button class="btn btn-success btn-C" id="btn-C">C#</button></a>
+   <i class="fa fa-angle-up" onclick="ScrollTop()" id="arrow-up"></i>
+
+</div>
+<div class="modal" id="css-modal">
+  <div class="modal-content" id="css2">
+    <h1 id="css-q">Which is the correct CSS syntax?</h1>
+    <input type="radio">{body:color{black}}
+    <input type="radio">body:color=black;
+    <input type="radio">body{color:black}
+    <input type="radio">body=color:black
+    <span class="closes" onclick="document.getElementById('css-modal').style.display='none'">&times;</span>
+  </div>
+</div>
+<div class="section-content1">
+  <h3 class="display-4 css">CSS Example:</h3>
+  <div id="box-code"  style="position: relative; left:10%; top: 50px; background-color: #fff; width: 35%; height: 380px; font-size: 20px; border: 3px solid #51d115;">
+    &nbsp;<span class="property1">body</span> {<br>
+      &nbsp;&nbsp;&nbsp;<span class="property2">background-color:</span>&nbsp;<span class="property3">lightblue;</span><br>&nbsp;}<br>
+      &nbsp;<span class="property1">h1</span> {<br>
+      &nbsp;&nbsp;&nbsp;<span class="property2">color:</span><span class="property3"> white;</span><br>
+      &nbsp;&nbsp;&nbsp;<span class="property2">text-align:</span>&nbsp;<span class="property3">center;</span><br>&nbsp;}<br><br>
+      &nbsp;<span class="property1">p</span> {<br>
+      &nbsp;&nbsp;&nbsp;<span class="property2">font-family:</span><span class="property3"> verdana;</span><br>
+      &nbsp;&nbsp;&nbsp;<span class="property2">font-size:</span><span class="property3"> 20px</span>;<br>&nbsp;}
+    </div>
+    <button class="btn btn-success" onclick="btntry()" id="btn-try">Try it</button>
+  <!-------------BOX-CODE2-MODAL-------------->
+  <div class="modal" id="box-code2">
+    <div class="modal-content" id="box-code3">
+      body {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;<br>
+      }<br>
+      h1 {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+      }<br>
+      p {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-family: verdana;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 20px;<br>
+      }
+    </div>
+  </div>
+    <h2 class="display-2" id="css">CSS</h2>
+      <p id="description-css">The language for styling web pages</p>
+   <a href="css.html"><button class="btn-secondary" id="btn-css">LEARN CSS</button></a>
+    <button class="btn-secondary" id="btn-info1">MORE INFO</button>
+</div>
+<div class="section-content2" id="tutorial">
+  <img src="https://logoeps.com/wp-content/uploads/2011/06/java-logo-vector.png" alt="Java" class="java-img">
+  <div class="box">
+    <h1 class="java">JAVA</h1>
+    <p class="description-1">A programming language</p>
+    <button class="btn5 btn-secondary" id="btn-5">LEARN JAVA</button>
+  </div>
+  <img src="https://i.pinimg.com/originals/0f/60/19/0f6019e15f1d8ae07e7e8ea16d242676.png" alt="python" class="Python-img">
+  <div class="box2">
+    <h1 class="python">Python</h1>
+    <p class="description-2">A programming language</p>
+    <button class="btn6 btn-secondary" id="btn-6">LEARN Python</button>
+  </div>
+  <div class="box3">
+    <h1 class="php">PHP</h1>
+    <p class="description-3">A web server programming language</p>
+   <a href="php.html"><button class="btn7 btn-secondary" id="btn-7">LEARN PHP</button></a>
+  </div>
+  <div class="box4">
+    <h1 class="JQuery">JQuery</h1>
+    <p class="description-4">A JavaScript library for developing web pages</p>
+   <a href="jq.html"><button class="btn8 btn-secondary" id="btn-8">LEARN JQuery</button></a>
+  </div>
+</div>
+<div>
+  <h1 class="display-4 container Code-example" id="code-snippet">Code snippets for HTML, CSS and JavaScript</h1>
+  <div class="container" id="code1">
+    <h1  style="font-weight: normal; position: relative;">Login</h1>
+    <p id="learn1">Click on the button to open the login form:</p>
+    <button class="btn btn-primary btn-lg" id="btn-log-modal" style="margin-top: 7px;" onclick="modallogin(this)">Login</button>
+</div>  
+  <div class="container" id="code2">
+    <h1 id="hover" style="font-weight: normal; position: relative; top:10px">Hover Dropdowns</h1>
+    <p id="learn2">A dropdown menu is a toggleable menu that allows the user to choose one value from a predefined list:</p>
+    <div class="dropdown3" style="width: 10%">
+  <button class="btn-lg" id="dropbtn3" style="background-color: rgb(255, 106, 0); color: #fff;border: none;margin-top: 10px;
+    ">Hover</button>
+      <div class="dropdown-content3">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+  </div>
+<div class="container" id="code3">
+    <h1  style="font-weight: normal; position: relative; top:10px">Modal Box</h1>
+    <p id="learn3">A modal is a dialog box/popup window that is displayed on top of the current page:</p>
+    <button onclick="popup()" id="open" class="btn-lg" style="background: rgb(0, 131, 102); color: #fff; border: none; margin-top: 10px;">Open</button>
+</div>
+<div class="container" id="code4">
+  <h1 class="alert-h1" style="font-weight: normal;">Alert Buttons</h1>
+  <p id="learn4">Learn how to make alert buttons</p>
+  <button class="btn-primary" onclick="primary()" id="primary">Primary</button>
+  <button class="btn-secondary" onclick="secondary()" id="secondary">Secondary</button>
+  <button class="btn-success" onclick="success()" id="success">Success</button>
+  <button class="btn-warning" onclick="warning()" id="warning">Warning</button>
+  <button class="btn-danger" onclick="danger()" id="danger">Danger</button>
+</div>
+<div class="container" id="code5">
+   <h1 class="toggle-h1" style="font-weight: normal;">Toggle Hide Show</h1>
+   <p id="learn5">Toggle between hiding and showing an element with JavaScript.</p>
+   <button class="btn btn-primary btn-lg" onclick="toggle()" class="primary">Toggle</button>
+ </div>
+</div>
+
+
+
+  <!------------------------------MODAL-LOGIN-------------------------------->
+  <div class="modal" id="id03">
+    <form class="modal-content" id="form4">
+      <h1 style="color: #fff; position: absolute; top: 20px; left: 35%;">Login</h1>
+    <span id="closes"  onclick="document.getElementById('id03').style.display = 'none'">&times;</span>
+    <input type="text" value="Name" style="position: relative; left: 20px; top: 30px; width: 90%;">
+    <input type="text" value="Password" style="position: relative; left: 20px; top: 30px; width: 90%;">
+    <button class="btn-success" id="login-snip">Log in</button>
+   </form>
+</div>
+<!---------------------------------MODAL-BOX----------------------------------->
+<div class="modal" id="popup">
+ <div class="modal-content" id="popup2">
+  <h1>Hello, Ramazan</h1>
+  <p>It's modal popup window</p>
+  </div>
+</div>
+<div id="slide-show">
+  <img class="mySlides" src="https://blog.grinfer.com/wp-content/uploads/2020/02/How-to-Learn-Computer-Programming-Languages-1160x591.png" width="100%" height="550px">
+  <img class="mySlides" src="https://www.jonesday.com/-/media/files/publications/2019/05/when-coding-is-criminal/when-coding-is-criminal.jpg" width="100%" height="550px">
+  <img class="mySlides" src="https://miro.medium.com/max/1500/1*t9eJQXoWfcH_mkBGuLiJFw.jpeg" width="100%" height="550px">
+  <img class="mySlides" src="https://exposit.com/media/images/Which_programming_language_to_choose.original.png" width="100%" height="550px">
+<form class="container" id="form3">
+  <h1 class="contactUs">Contact us</h1>
+  Name
+  <input type="text" placeholder="Enter Name" id="fname">
+  Email
+  <input type="text" placeholder="Enter Email" id="femail">
+  <input type="button" id="submit" value="Submit">
+</form>
+</div>
+<div class="video">
+  <h1 class="video-description">Welcome to our video about front-end</h1>
+  <iframe width="644" height="362" src="https://www.youtube.com/embed/ltMSrSis9ww?controls=1"></iframe>
+</div>
+<div class="footer">
+  <h1 class="WeAre">We are in:</h1>
+  <a href="#" class="fa_instagram"><i class="fa fa-instagram" id="fa_instagram  "></i></a>
+  <a href="#" class="fa_vk"><i class="fa fa-vk"></i></a>
+  <a href="#" class="fa_twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="fa_facebook"><i class="fa fa-facebook"></i></a>
+  <p class="Last_description"><a href="index.html" style="text-decoration: none;" class="index">IT Tutorial</a> is, and will always be, a completely free developers resource.</p>
+ <address>
+   Website: <a href="index.html" target="_blank" style="text-decoration: none;">Tutorial.com</a><br>
+   Tel: 777 000 222 1938 311.<br>
+   Email: <a href="#">Programmer@inbox.com</a><br>
+   Address: ST 222 OLD Avenue.
+ </address>
+ <div id="map"></div>
+<div id="marker1">
+  <input type="search" placeholder="Search" id="fsearch2"><i class="fa fa-search" id="search"></i>
+  <span class="close-marker" id="close-map" onclick="document.getElementById('marker1').style.display='none'">&times;</span>
+   <h1 class="container" id="ramstor">Рамстор Астана</h1>
+   <p class="container">Супермаркет  <i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star"></i>
+   </p>
+   <hr>
+   <div class="container">
+   <i class="fa fa-facebook" id="facebook"></i>
+   <i class="fa fa-instagram" id="instagram"></i>
+   <i class="fa fa-bookmark" id="bookmark"></i>
+   <i class="fa fa-phone" id="phone"></i>
+   <i class="fa fa-share" id="share"></i>
+   </div>
+ </div>
+ <div id="marker1-modal" style="display: none;">
+   Ramstor Astana <br>
+   Supermarket
+ </div>
+</div>
+ <div id="marker3">
+  <input type="search" placeholder="Search" id="fsearch"><i class="fa fa-search" id="search"></i>
+  <span class="close-marker" id="close-map" onclick="document.getElementById('marker3').style.display='none'">&times;</span>
+   <h1 class="container" id="pinta">Пинта Bar& Grill</h1>
+   <p class="container" id="pinta-address">Пинта Куйши Дина</p>
+   <hr>
+   <div class="container">
+   <i class="fa fa-facebook" id="facebook"></i>
+   <i class="fa fa-instagram" id="instagram"></i>
+   <i class="fa fa-bookmark" id="bookmark"></i>
+   <i class="fa fa-phone" id="phone"></i>
+   <i class="fa fa-share" id="share"></i>
+   </div>
+   <hr>
+ </div>
+</div>
+
+
+
+
+<script>
+  var Index = 0;
+  slideshow()
+  function slideshow() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+	x[i].style.display = "none";  
+  }
+  Index++;
+  if (Index > x.length) {
+    Index = 1
+  }    
+  x[Index-1].style.display = "block";  
+  setTimeout(slideshow, 2000); 
+}
+</script>
+<script type="text/javascript">
+  $(function(){
+  $('.border').mouseenter(function(){
+    $('.border').text("Hello, world!").show();
+  });
+});
+  $(function() {
+    $('#home').click(function() {
+      $('.container3').toggle({
+      });
+    });
+  });
+  $(function(){
+     $('#btn-5').click(function(){
+       var div = $('.java-img');
+       div.animate({left: '800px'}, 'slow');
+       div.animate({height: 'toggle'}, 'slow');
+     });
+   });
+   $(function(){
+     $('#btn-6').click(function(){
+       var div = $('.Python-img');
+       div.animate({left: '300px'}, 'slow');
+       div.animate({height: 'toggle'}, 'slow');
+     });
+   });
+</script>
+</body>
+</html>

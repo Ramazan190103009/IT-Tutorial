@@ -1,0 +1,534 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .navbar{
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        border-radius: 0px;
+    }
+    .navbar-brand{
+        font-size: 35px;
+    }
+    .nav{
+        font-size: 17px;
+    }
+    form{
+        position: absolute;
+        top: 7px;
+        left: 75%;
+        width: 25%;
+    }
+    .info {
+        position: relative;        
+        top: 50px;
+        width: 100%;
+        color: #000;
+        font-size: 20px;
+        background-color: rgb(231, 223, 211);
+    }
+    .example{
+        position: relative;
+        top: 50px;
+        height: 400px;
+        background-color: rgb(211, 208, 208);
+    }
+    .code{
+        background-color: #1b171f;
+        color: rgb(185, 107, 17);
+        font-size: 18px;
+        padding: 12px;
+    }
+    .code span{
+        color: green;
+    }
+    .html-image{
+        position: absolute;
+        left: 70%;
+        top: 170px;
+        width: 16%;
+        height: 180px;
+        animation-name: img;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+    @keyframes img{
+        from{background-color: yellow; transform: rotate(0deg);}
+        to{background-color: red; transform: rotate(360deg)}
+    }
+    .explain{
+        position: relative;
+        top: 50px;
+        width: 100%;
+        background-color: rgb(231, 223, 211);
+    }
+    .explain-list{
+        font-size: 17px;
+        color: #000;
+    }
+    .tag{
+        position: relative;
+        left: 20px;
+        width: 80%;
+        font-size: 20px;
+        color: #000;
+    }
+    .p1{
+        font-size: 18px; 
+        color: #000; 
+        position: relative; 
+        left: 20px; 
+        width: 80%;
+    }
+    .p2{
+        font-size: 18px; 
+        color: #000; 
+        position: relative; 
+        left: 20px; 
+        width: 80%;
+    }
+    table{
+        font-size: 20px;
+    }
+    .html-list{
+        font-size: 16px;
+        color: #000;
+    }
+    .result-h1{
+        position: relative;
+        left: 50px;
+        top: 70px;
+        color: #000;
+        width: 30%;
+        font-weight: bold;
+    }
+    .result-img{
+        position: relative;
+        left: 50px;
+        top: 80px;
+    }
+    .exercise{
+        position: relative;
+        top: 100px;
+        height: 275px;
+        color: #000;
+        font-size: 18px;
+        background-color: rgb(231, 223, 211);
+    }
+    .ex-heading{
+        position: relative;
+        left: 20px;
+        width: 30%;
+        font-size: 45px;
+        color: #000;
+    }
+    .buttons{
+        width: 250px;
+    }
+    .show{
+        position: relative;
+        left: 15px;
+        margin-top: 10px;
+    }
+    .success{
+        border-color: #4caf50;
+        color: green;
+    }
+    .success:hover{
+        background-color: #4caf50;
+        color: #fff;
+    }
+    .ex-1{
+        position: absolute;
+        left: 300px;
+        top: 100px;
+        width: 70%;
+    }
+    .ex-2{
+        position: absolute;
+        left: 300px;
+        top: 105px;
+        width: 70%;
+        display: none;
+    }
+    .ex-3{
+        position: absolute;
+        left: 300px;
+        top: 105px;
+        width: 70%;
+        display: none;
+    }
+    .ex-4{
+        position: absolute;
+        left: 300px;
+        top: 105px;
+        width: 110%;
+        display: none;
+    }
+    .code-group{
+        font-size: 18px;
+    }
+    .green{
+        background-color: #4caf50;
+        color: #000;
+    }
+    .quiz{
+        position: relative;
+        top: 100px;
+        font-size: 18px;
+        color: #000;
+        text-align: center;
+    }
+    .quiz-heading{
+        position: relative;
+        left: 450px;
+        width: 30%;
+        font-size: 45px;
+        columns: #000;
+    }
+    .div-start-quiz{
+        height: 170px;
+        font-size: 25px;
+        background-color: rgb(206, 202, 202);
+    }
+    @media screen and (min-width: 600px){
+        .navbar-toggler{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 415px){
+        body{
+            width: 100%;
+        }
+        .navbar-toggler{
+            position: absolute;
+            left: 370px;
+            top: 7px;
+        }
+        .navbar-img{
+            height: 30px;
+        }
+        form{
+            display: none;
+        }
+        .info{
+            width: 107%;
+        }
+        .example{
+            width: 107%;
+        }
+        .explain{
+            width: 107%;
+        }
+        .exercise{
+            width: 107%;
+        }
+        .quiz{
+            width: 107%;
+        }
+        .html-image{
+            position: relative;
+            left: 150px;
+            top: 10px;
+            width: 35%;
+        }
+        .result-h1{
+            position: relative;
+            left: 20px;
+        }
+        .result-img{
+            position: relative;
+            left: 20px;
+            width: 400px;
+        }
+        .quiz-heading{
+            position: relative;
+            left: 120px;
+            width: 50%;
+        }
+        .ex-heading{
+            width: 90%;
+        }
+        #ex-1{
+            position: absolute;
+            left: 130px;
+            top: 80px;
+        }
+        .p2{
+            font-size: 13px;
+        }
+        .success{
+            font-size: 12px;
+        }
+        .code-group{
+            font-size: 13px;
+        }
+        .buttons{
+            width: 30%;
+        }
+    }
+    @media screen and (max-width: 376px){
+        body{
+            width: 100%;
+        }
+        .navbar-toggler{
+            position: absolute;
+            left: 370px;
+            top: 7px;
+        }
+        .navbar-img{
+            height: 30px;
+        }
+        form{
+            display: none;
+        }
+        .info{
+            width: 115%;
+        }
+        .example{
+            width: 115%;
+        }
+        .explain{
+            width: 115%;
+        }
+        .exercise{
+            width: 115%;
+        }
+        .quiz{
+            width: 115%;
+        }
+        .html-image{
+            position: relative;
+            left: 130px;
+            top: 10px;
+            width: 35%;
+        }
+        .result-h1{
+            position: relative;
+            left: 20px;
+        }
+        .result-img{
+            position: relative;
+            left: 10px;
+            width: 400px;
+        }
+        .quiz-heading{
+            position: relative;
+            left: 100px;
+            width: 50%;
+        }
+        .ex-heading{
+            width: 90%;
+        }
+        #ex-1{
+            position: absolute;
+            left: 130px;
+            top: 80px;
+        }
+        .p2{
+            font-size: 13px;
+        }
+        .success{
+            font-size: 12px;
+        }
+        .code-group{
+            font-size: 13px;
+        }
+        .buttons{
+            width: 30%;
+        }
+    }
+</style>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">HTML Tutorial</a>
+          </div>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span><img src="icons8-menu-50.png" class="navbar-img"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="nav navbar-nav" id="nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#exercise">Exercises</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+          </ul>
+          </div>
+        <form action="" class="form-inline">
+            <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search">
+            <button type="submit" class="btn btn-success search" onclick="scroll1()">Search</button>
+        </form>
+    </div>
+    </nav>
+<div id="intro">
+    <div class="container-fluid info">
+        <h1>Introduction </h1> 
+        <hr>
+        <b>HTML</b> is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!
+        <hr>
+        <h2 class="display-2">What is HTML?</h2>
+        <ul class="html-list">
+        <li>HTML stands for Hyper Text Markup Language</li>
+        <li>HTML is the standard markup language for creating Web pages</li>
+        <li>HTML describes the structure of a Web page</li>
+        <li>HTML consists of a series of elements</li>
+        <li>HTML elements tell the browser how to display the content</li>
+        <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+        </li></ul>
+        <img class="html-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="html">
+        <hr>
+    </div>
+    <div class="container-fluid example">
+        <h1>A Simple HTML Document</h1>
+        <div class="code">
+            <span><</span>!DOCTYPE HTML<span>></span><br>
+            &nbsp;&nbsp;<span><</span>html<span>></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>head<span>></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>tittle<span>></span><span style="color: #fff;">Test</span><span><</span>/tittle<span>></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>/head<span>></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>body<span>></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>h1<span>></span><span style="color: #fff;">This is a heading</span><span><</span>/h1<span>></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>p<span>></span><span style="color: #fff;">This is a paragraph</span><span><</span>/p<span>></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>/body<span>></span><br>
+            &nbsp;&nbsp;<span><</span>/html<span>></span><br>
+          </div>
+    </div>
+    <div class="container-fluid explain">
+        <h1 class="container-fluid">Example Explained</h1>
+        <ul class="explain-list">
+            <li>The <code><span><</span>!DOCTYPE html</code><span>></span> declaration defines that this document is an HTML5 document</li>
+            <li>The <code><span><</span>html<span>></span></code> element is the root element of an HTML page</li>
+            <li>The <code><span><</span>head<span>></span></code> element contains meta information about the HTML page</li>
+            <li>The <code><span><</span>tittle<span>></span></code> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)</li>
+            <li>The <code><span><</span>body<span>></span></code> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+            <li>The <code><span><</span>h1<span>></span></code> element defines a large heading</li>
+            <li>The <code><span><</span>p<span>></span></code> element defines a paragraph</li>
+        </ul>
+        <h1 class="container-fluid">What is an HTML Element</h1>
+        <p class="container-fluid-left p1">The <b>HTML</b> element is everything from the start tag to the end tag:</p>
+        <div class="tag">
+            <code><span><</span>h1<span>></span></code> My First Heading <code><span><</span>/h1<span>></span></code><br><br>
+        <table class="table table-striped table-hover table-bordered">
+            <tr>
+                <th>Start tag</th>
+                <th>Element content</th>
+                <th>End tag</th>
+            </tr>
+            <tr>
+                <td><span><</span>h1<span>></span></td>
+                <td>My First Heading</td>
+                <td><span><</span>/h1<span>></span></td>
+            </tr>
+            <tr>
+                <td><span><</span>p<span>></span></td>
+                <td>My First Paragraph</td>
+                <td><span><</span>/p<span>></span></td>
+            </tr>
+            <tr>
+                <td><span><</span>br<span>></span></td>
+                <td><em>none</em></td>
+                <td><em>none</em></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>
+    <div class="result" id="result">
+        <h1 class="result-h1">Result:</h1>
+        <img class="result-img" src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9956CE345BDB2E8C30">
+    </div>
+<div class="container-fluid exercise" id="exercise">
+    <h1 class="ex-heading">HTML Exercise</h1>
+    <div class="container btn-group-vertical buttons">
+    <button class="btn success btn-lg" onclick="change(this)" id="exercise1">Exercise 1</button>
+    <button class="btn success btn-lg" onclick="change(this)" id="exercise2">Exercise 2</button>
+    <button class="btn success btn-lg" onclick="change(this)" id="exercise3">Exercise 3</button>
+    <button class="btn success btn-lg" onclick="change(this)" id="exercise2">Exercise 4</button>
+    </div>
+    <div class="ex-1" id="ex-1">
+    <p class="p2">1) Add a "tooltip" to the paragraph below with the text "About paragraph".</p>
+    <div class="container-fluid code-group" id="code1"><code><span><</span>p <span id="demo"> <input type="text" style="width: 15%;"></span> = "About IT Tutorial"> IT Tutorial is a web developer's site.<span><</span>/p></code></div>
+    <button class="btn btn-success btn-lg show" onclick="fun()">Show answer</button>
+    </div>
+
+    <div class="ex-2" id="ex-2">
+    <p class="p2">2) Set the size of the image to 250 pixels wide and 400 pixels tall.</p>
+    <div class="container-fluid code-group" id="code2"><code><span><</span>img src="w3schools.jpg" width="<span id="demo2"><input type="text" style="width: 10%;"></span>" height="<span id="demo3"><input type="text" style="width: 10%;"></span>"></code></div>
+    <button class="btn btn-success btn-lg show" onclick="fun2()">Show answer</button>
+    </div>
+    <div class="ex-3" id="ex-3">
+        <p class="p2">3) Make the element below into a link that goes to "https://www.w3schools.com".</p>
+        <div class="container-fluid code-group" id="code3"><code><span><</span>a <span id="demo4"><input type="text" style="width: 10%;"></span>"https://www.w3schools.com">This is a link <span><</span>/a></code></div>
+        <button class="btn btn-success btn-lg show" onclick="fun3()">Show answer</button>
+    </div>
+    <div class="ex-4" id="ex-4">
+        <p class="p2">4) Specify an alternate text for the image. 
+            Alternate text is useful when the image cannot be displayed, like when the page is read by a screen reader.</p>
+        <div class="container-fluid code-group" id="code4"><code>img src="w3schools.png" <span id="demo5"><input type="text" style="width: 5%;"></span>="w3schools logo"></code></div>
+        <button class="btn btn-success btn-lg show" onclick="fun4()">Show answer</button>
+    </div>
+</div>
+<div class="container-fluid quiz jumbotron" id="quiz">
+    <h1 class="quiz-heading">Quiz</h1>
+    <hr>
+    You can test your html quiz
+    <hr>
+    <h1 class="quiz-heading">The Test</h1>
+    The test contains 40 questions and there is no time limit. <br>
+    The test is not official, it's just a nice way to see how much you know, or don't know, about HTML. <br>
+    Count Your Score <br>
+    You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 40 points. <br>
+    <div class="div-start-quiz">
+       <h1>Start the Quiz</h1>
+       Good Luck! <br>
+       <a href="https://www.w3schools.com/quiztest/quiztest.asp?qtest=HTML" class="btn btn-primary btn-lg" target="_blank">Start</a>
+    </div>
+</div>
+   <script>
+       function fun() {
+           document.getElementById('demo').innerHTML='tittle';
+       }
+       function fun2() {
+           document.getElementById('demo2').innerHTML='250px';
+           document.getElementById('demo3').innerHTML='400px';
+       }
+       function fun3() {
+           document.getElementById('demo4').innerHTML="href=";
+       }
+       function fun4() {
+           document.getElementById('demo5').innerHTML="alt";
+       }
+       function change(element) {
+           var a = element.innerHTML;
+           switch (a) {
+               case("Exercise 2"):
+               document.getElementById('ex-1').innerHTML = document.getElementById('ex-2').innerHTML;
+               break;
+               case("Exercise 3"):
+               document.getElementById('ex-1').innerHTML = document.getElementById('ex-3').innerHTML;
+               break;
+               case("Exercise 4"):
+               document.getElementById('ex-1').innerHTML = document.getElementById('ex-4').innerHTML;
+               break;
+           }
+       }
+</script>
+
+</body>
+</html>
